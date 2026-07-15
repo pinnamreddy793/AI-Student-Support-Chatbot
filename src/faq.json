@@ -1,0 +1,26 @@
+[
+    {
+        "keyword": "admission",
+        "response": "You can apply for admission through the university admissions portal."
+    },
+    {
+        "keyword": "register",
+        "response": "Students can register for classes using the university registration portal."
+    },
+    {
+        "keyword": "tuition",
+        "response": "Tuition fee information is available on the university website."
+    },
+    {
+        "keyword": "financial aid",
+        "response": "Please contact the Financial Aid Office or visit their webpage for available scholarships and aid."
+    },
+    {
+        "keyword": "deadline",
+        "response": "Application deadlines are published on the university admissions website."
+    },
+    {
+        "keyword": "library",
+        "response": "The university library is open Monday through Friday from 8 AM to 10 PM."
+    }
+]

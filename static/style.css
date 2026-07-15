@@ -1,0 +1,52 @@
+--AI Student Support Chatbot
+--style.css contains the styling elements for the Student Chatbot webpage
+
+body{
+
+font-family:Arial;
+
+background:#f4f4f4;
+
+}
+
+.container{
+
+width:600px;
+
+margin:50px auto;
+
+background:white;
+
+padding:20px;
+
+border-radius:8px;
+
+box-shadow:0px 0px 10px gray;
+
+}
+
+input{
+
+width:80%;
+
+padding:10px;
+
+}
+
+button{
+
+padding:10px 20px;
+
+}
+
+.response{
+
+margin-top:20px;
+
+background:#eef;
+
+padding:15px;
+
+border-radius:5px;
+
+}
