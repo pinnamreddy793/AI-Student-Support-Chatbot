@@ -90,20 +90,22 @@ def get_response(question):
         )
 
     words = question.split()
+    best_match = None
 
     for item in faq:
 
         keyword = item["keyword"].lower()
 
         if keyword in question:
+            best_match = item["response"]
+            break
 
-            return item["response"]
+        if keyword.startswith(tuple(words)):
+            best_match = item["response"]
 
-        for word in words:
+    if best_match:
+        return best_match
 
-            if word == keyword:
-
-                return item["response"]
 
     return (
         "Sorry, I could not understand your question.\n\n"
