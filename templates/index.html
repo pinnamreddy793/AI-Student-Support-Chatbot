@@ -1,50 +1,163 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI Student Support Chatbot</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 
 </head>
 
 <body>
 
+<header>
+
+    <div class="header-left">
+
+        <h2>AI Student Support Chatbot</h2>
+
+        <p>
+            Higher Education Support System
+        </p>
+
+    </div>
+
+    <div class="header-right">
+
+        <span>
+            Welcome,
+            <strong>{{ username }}</strong>
+        </span>
+
+        <a href="{{ url_for('logout') }}" class="logout-btn">
+
+            Logout
+
+        </a>
+
+    </div>
+
+</header>
+
+
 <div class="container">
 
-<h1>AI Student Support Chatbot</h1>
+    <div class="chat-window">
 
-<form method="POST">
+        {% if chat_history|length == 0 %}
 
-<input
-type="text"
-name="message"
-placeholder="Ask your question..."
-required>
+            <div class="welcome-message">
 
-<button type="submit">
+                👋 Welcome!
 
-Ask
+                <br><br>
 
-</button>
+                Ask me questions about:
 
-</form>
+                <ul>
 
-{% if response %}
+                    <li>Admissions</li>
 
-<div class="response">
+                    <li>Registration</li>
 
-<h3>Chatbot Response</h3>
+                    <li>Tuition</li>
 
-<p>{{ response }}</p>
+                    <li>Financial Aid</li>
+
+                    <li>Housing</li>
+
+                    <li>Library</li>
+
+                    <li>Scholarships</li>
+
+                    <li>Graduation</li>
+
+                </ul>
+
+            </div>
+
+        {% endif %}
+
+
+        {% for chat in chat_history %}
+
+        <div class="user-message">
+
+            <strong>You</strong>
+
+            <br>
+
+            {{ chat.user }}
+
+        </div>
+
+        <div class="bot-message">
+
+            <strong>Chatbot</strong>
+
+            <br>
+
+            {{ chat.bot }}
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+
+    <form
+        method="POST"
+        action="{{ url_for('chat') }}"
+        class="chat-form">
+
+        <input
+            type="text"
+            name="message"
+            placeholder="Ask about admissions, tuition, registration..."
+            required>
+
+        <button type="submit">
+
+            Send
+
+        </button>
+
+    </form>
+
+
+    <div class="buttons">
+
+        <a href="{{ url_for('clear') }}">
+
+            <button>
+
+                Clear Chat
+
+            </button>
+
+        </a>
+
+    </div>
 
 </div>
 
-{% endif %}
 
-</div>
+<footer>
+
+    MSIT 5910 Capstone Project
+
+    <br>
+
+    AI-Powered Student Support Chatbot
+
+</footer>
 
 </body>
 

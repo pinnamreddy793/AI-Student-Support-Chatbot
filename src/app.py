@@ -1,7 +1,16 @@
 #AI Student Support Chatbot
 #app.py file acts as the platform for the user to interact on the browser
 
-from flask import Flask, render_template, request
+
+from flask import (
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    session
+)
+
 from chatbot import get_response
 import os
 
@@ -13,16 +22,98 @@ app = Flask(
     static_folder=os.path.join(BASE_DIR, "static")
 )
 
-@app.route("/", methods=["GET", "POST"])
+# Secret key for session management
+app.secret_key = "student_support_chatbot_secret"
+
+# Demo user credentials
+USERNAME = "student"
+PASSWORD = "password123"
+
+
+@app.route("/")
 def home():
-    response = ""
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    if "chat_history" not in session:
+        session["chat_history"] = []
+
+    return render_template(
+        "index.html",
+        username=session["user"],
+        chat_history=session["chat_history"]
+    )
+
+
+@app.route("/chat", methods=["POST"])
+def chat():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
+
+    message = request.form.get("message")
+
+    if message:
+
+        response = get_response(message)
+
+        history = session.get("chat_history", [])
+
+        history.append({
+            "user": message,
+            "bot": response
+        })
+
+        session["chat_history"] = history
+
+    return redirect(url_for("home"))
+
+
+@app.route("/clear")
+def clear():
+
+    if "chat_history" in session:
+        session["chat_history"] = []
+
+    return redirect(url_for("home"))
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+
+    error = ""
 
     if request.method == "POST":
-        user_input = request.form["message"]
-        response = get_response(user_input)
 
-    return render_template("index.html", response=response)
+        username = request.form["username"]
+        password = request.form["password"]
+
+        if username == USERNAME and password == PASSWORD:
+
+            session["user"] = username
+            session["chat_history"] = []
+
+            return redirect(url_for("home"))
+
+        else:
+            error = "Invalid username or password."
+
+    return render_template("login.html", error=error)
+
+
+@app.route("/logout")
+def logout():
+
+    session.clear()
+
+    return redirect(url_for("login"))
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
 
+    app.run(
+        host="0.0.0.0",
+        port=5000,
+        debug=True
+    )

@@ -1,26 +1,122 @@
 [
     {
         "keyword": "admission",
-        "response": "You can apply for admission through the university admissions portal."
+        "response": "Students can apply for admission through the university Admissions Portal. Required documents include academic transcripts, identification, and application forms."
     },
     {
-        "keyword": "register",
-        "response": "Students can register for classes using the university registration portal."
-    },
-    {
-        "keyword": "tuition",
-        "response": "Tuition fee information is available on the university website."
-    },
-    {
-        "keyword": "financial aid",
-        "response": "Please contact the Financial Aid Office or visit their webpage for available scholarships and aid."
+        "keyword": "apply",
+        "response": "Applications can be submitted online through the Admissions Portal. Be sure to review the admission requirements before applying."
     },
     {
         "keyword": "deadline",
-        "response": "Application deadlines are published on the university admissions website."
+        "response": "Application deadlines vary by semester. Please visit the university admissions webpage for the latest dates."
+    },
+    {
+        "keyword": "register",
+        "response": "Students can register for classes through the Student Registration Portal after meeting with their academic advisor."
+    },
+    {
+        "keyword": "registration",
+        "response": "Course registration opens according to the academic calendar. Students should complete registration before the published deadline."
+    },
+    {
+        "keyword": "course",
+        "response": "Course schedules and availability can be viewed through the Student Information System."
+    },
+    {
+        "keyword": "advisor",
+        "response": "Students can schedule appointments with their academic advisor using the Advising Portal."
+    },
+    {
+        "keyword": "tuition",
+        "response": "Current tuition and fee information is available on the university Finance Office website."
+    },
+    {
+        "keyword": "fees",
+        "response": "Mandatory student fees include technology, library, student activity, and laboratory fees depending on your program."
+    },
+    {
+        "keyword": "payment",
+        "response": "Tuition payments can be completed online through the Student Finance Portal using a credit card or bank transfer."
+    },
+    {
+        "keyword": "financial",
+        "response": "The Financial Aid Office assists students with grants, loans, scholarships, and work-study opportunities."
+    },
+    {
+        "keyword": "scholarship",
+        "response": "Scholarship opportunities are available for eligible students. Visit the Financial Aid Office for eligibility requirements."
+    },
+    {
+        "keyword": "loan",
+        "response": "Students may apply for federal and private student loans through the Financial Aid Office."
+    },
+    {
+        "keyword": "housing",
+        "response": "On-campus housing applications are available through the Housing Office website."
+    },
+    {
+        "keyword": "dorm",
+        "response": "Residence halls provide furnished rooms, internet access, laundry facilities, and dining services."
     },
     {
         "keyword": "library",
-        "response": "The university library is open Monday through Friday from 8 AM to 10 PM."
+        "response": "The university library is open Monday through Friday from 8:00 AM to 10:00 PM."
+    },
+    {
+        "keyword": "book",
+        "response": "Students can borrow books using their university ID card."
+    },
+    {
+        "keyword": "parking",
+        "response": "Parking permits are available through Campus Services. Students must register their vehicle before parking on campus."
+    },
+    {
+        "keyword": "transcript",
+        "response": "Official transcripts can be requested online through the Registrar's Office."
+    },
+    {
+        "keyword": "graduation",
+        "response": "Graduation applications must be submitted before the graduation deadline published by the Registrar."
+    },
+    {
+        "keyword": "email",
+        "response": "University email accounts are automatically created after student enrollment."
+    },
+    {
+        "keyword": "password",
+        "response": "Students can reset their university password through the IT Help Desk portal."
+    },
+    {
+        "keyword": "wifi",
+        "response": "Campus Wi-Fi is available throughout the university using your student credentials."
+    },
+    {
+        "keyword": "it",
+        "response": "The IT Help Desk provides technical support for email, Wi-Fi, software, and account access."
+    },
+    {
+        "keyword": "id",
+        "response": "Student ID cards are issued by the Campus Card Office after enrollment."
+    },
+    {
+        "keyword": "international",
+        "response": "International students should contact the International Student Office for visa and immigration support."
+    },
+    {
+        "keyword": "career",
+        "response": "Career Services offers resume reviews, interview preparation, internships, and job placement assistance."
+    },
+    {
+        "keyword": "internship",
+        "response": "Internship opportunities are posted through the Career Services Portal."
+    },
+    {
+        "keyword": "health",
+        "response": "Student Health Services provides medical consultations, vaccinations, and wellness programs."
+    },
+    {
+        "keyword": "cafeteria",
+        "response": "The campus cafeteria is open daily and offers a variety of meal plans for students."
     }
 ]
