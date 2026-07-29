@@ -4,6 +4,13 @@
 import json
 import os
 from datetime import datetime
+import nltk
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+
+# Uncomment these lines the first time you run the application and comment or remove for later runs.
+#nltk.download("punkt")
+#nltk.download("stopwords")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FAQ_FILE = os.path.join(BASE_DIR, "faq.json")
@@ -12,6 +19,29 @@ with open(FAQ_FILE, "r") as file:
     faq = json.load(file)
 
 question_count = 0
+
+
+def preprocess(text):
+    """
+    Preprocess user input using basic NLP.
+    - Convert to lowercase
+    - Tokenize the sentence
+    - Remove punctuation
+    - Remove English stop words
+    """
+
+    text = text.lower()
+
+    tokens = word_tokenize(text)
+
+    stop_words = set(stopwords.words("english"))
+
+    tokens = [
+        word for word in tokens
+        if word.isalnum() and word not in stop_words
+    ]
+
+    return tokens
 
 
 def log_question(question):
@@ -89,23 +119,20 @@ def get_response(question):
             "- Academic Advising"
         )
 
-    words = question.split()
-    best_match = None
+    # NLP preprocessing
+    tokens = preprocess(question)
 
     for item in faq:
 
         keyword = item["keyword"].lower()
 
+        # Match keyword in processed tokens
+        if keyword in tokens:
+            return item["response"]
+
+        # Also support multi-word keywords
         if keyword in question:
-            best_match = item["response"]
-            break
-
-        if keyword.startswith(tuple(words)):
-            best_match = item["response"]
-
-    if best_match:
-        return best_match
-
+            return item["response"]
 
     return (
         "Sorry, I could not understand your question.\n\n"
