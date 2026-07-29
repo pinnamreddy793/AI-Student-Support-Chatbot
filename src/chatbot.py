@@ -8,9 +8,9 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-# Uncomment these lines the first time you run the application and comment or remove for later runs.
-#nltk.download("punkt")
-#nltk.download("stopwords")
+# Comment these lines after the first time you run the application.
+nltk.download("punkt")
+nltk.download("stopwords")
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FAQ_FILE = os.path.join(BASE_DIR, "faq.json")
