@@ -122,17 +122,42 @@ def get_response(question):
     # NLP preprocessing
     tokens = preprocess(question)
 
+    best_match = None
+    highest_score = 0
+
+
     for item in faq:
 
-        keyword = item["keyword"].lower()
+        #score = 0
 
-        # Match keyword in processed tokens
-        if keyword in tokens:
-            return item["response"]
+        for keyword in item["keywords"]:
 
-        # Also support multi-word keywords
-        if keyword in question:
-            return item["response"]
+            keyword = keyword.lower()
+            score = 0
+
+            #Exact keyword matching
+            if keyword in tokens:
+                score += 3
+
+            #Keyword appears in sentence
+            if keyword in question:
+                score += 2
+
+            #Handle similar words
+            for token in tokens:
+
+                if keyword in token or token in keyword:
+                    score += 1
+
+
+            if score > highest_score:
+                highest_score = score
+                best_match = item
+
+    #Return best matching FAQ response
+    if best_match and highest_score > 0:
+        return best_match["response"]
+
 
     return (
         "Sorry, I could not understand your question.\n\n"

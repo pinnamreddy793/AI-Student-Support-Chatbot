@@ -1,122 +1,94 @@
 [
     {
-        "keyword": "admission",
+        "keywords": ["admission", "apply", "application", "enroll"],
         "response": "Students can apply for admission through the university Admissions Portal. Required documents include academic transcripts, identification, and application forms."
     },
     {
-        "keyword": "apply",
-        "response": "Applications can be submitted online through the Admissions Portal. Be sure to review the admission requirements before applying."
-    },
-    {
-        "keyword": "deadline",
+        "keywords": ["deadline", "date", "due"],
         "response": "Application deadlines vary by semester. Please visit the university admissions webpage for the latest dates."
     },
     {
-        "keyword": "register",
+        "keywords": ["register", "registration", "course registration", "enroll classes"],
         "response": "Students can register for classes through the Student Registration Portal after meeting with their academic advisor."
     },
     {
-        "keyword": "registration",
-        "response": "Course registration opens according to the academic calendar. Students should complete registration before the published deadline."
-    },
-    {
-        "keyword": "course",
+        "keywords": ["course", "classes", "schedule", "subjects"],
         "response": "Course schedules and availability can be viewed through the Student Information System."
     },
     {
-        "keyword": "advisor",
+        "keywords": ["advisor", "academic advisor", "guidance"],
         "response": "Students can schedule appointments with their academic advisor using the Advising Portal."
     },
     {
-        "keyword": "tuition",
-        "response": "Current tuition and fee information is available on the university Finance Office website."
+        "keywords": ["tuition", "fees", "cost", "payment"],
+        "response": "Current tuition and fee information is available on the university Finance Office website. Tuition payments can be completed online through the Student Finance Portal."
     },
     {
-        "keyword": "fees",
-        "response": "Mandatory student fees include technology, library, student activity, and laboratory fees depending on your program."
-    },
-    {
-        "keyword": "payment",
-        "response": "Tuition payments can be completed online through the Student Finance Portal using a credit card or bank transfer."
-    },
-    {
-        "keyword": "financial",
+        "keywords": ["financial", "financial aid", "aid", "grants", "loan", "loans"],
         "response": "The Financial Aid Office assists students with grants, loans, scholarships, and work-study opportunities."
     },
     {
-        "keyword": "scholarship",
+        "keywords": ["scholarship", "scholarships"],
         "response": "Scholarship opportunities are available for eligible students. Visit the Financial Aid Office for eligibility requirements."
     },
     {
-        "keyword": "loan",
-        "response": "Students may apply for federal and private student loans through the Financial Aid Office."
+        "keywords": ["housing", "dorm", "residence", "room"],
+        "response": "On-campus housing applications are available through the Housing Office website. Residence halls provide furnished rooms, internet access, laundry facilities, and dining services."
     },
     {
-        "keyword": "housing",
-        "response": "On-campus housing applications are available through the Housing Office website."
+        "keywords": ["library", "book", "books"],
+        "response": "The university library is available for student research. Students can borrow books using their university ID card."
     },
     {
-        "keyword": "dorm",
-        "response": "Residence halls provide furnished rooms, internet access, laundry facilities, and dining services."
-    },
-    {
-        "keyword": "library",
-        "response": "The university library is open Monday through Friday from 8:00 AM to 10:00 PM."
-    },
-    {
-        "keyword": "book",
-        "response": "Students can borrow books using their university ID card."
-    },
-    {
-        "keyword": "parking",
+        "keywords": ["parking", "permit", "vehicle"],
         "response": "Parking permits are available through Campus Services. Students must register their vehicle before parking on campus."
     },
     {
-        "keyword": "transcript",
+        "keywords": ["transcript", "records", "academic records"],
         "response": "Official transcripts can be requested online through the Registrar's Office."
     },
     {
-        "keyword": "graduation",
+        "keywords": ["graduation", "graduate", "degree completion"],
         "response": "Graduation applications must be submitted before the graduation deadline published by the Registrar."
     },
     {
-        "keyword": "email",
+        "keywords": ["email", "university email", "mail"],
         "response": "University email accounts are automatically created after student enrollment."
     },
     {
-        "keyword": "password",
+        "keywords": ["password", "reset password", "login issue"],
         "response": "Students can reset their university password through the IT Help Desk portal."
     },
     {
-        "keyword": "wifi",
+        "keywords": ["wifi", "wi-fi", "internet", "network"],
         "response": "Campus Wi-Fi is available throughout the university using your student credentials."
     },
     {
-        "keyword": "it",
+        "keywords": ["it", "technical support", "computer", "software"],
         "response": "The IT Help Desk provides technical support for email, Wi-Fi, software, and account access."
     },
     {
-        "keyword": "id",
+        "keywords": ["id", "student id", "card"],
         "response": "Student ID cards are issued by the Campus Card Office after enrollment."
     },
     {
-        "keyword": "international",
+        "keywords": ["international", "visa", "immigration"],
         "response": "International students should contact the International Student Office for visa and immigration support."
     },
     {
-        "keyword": "career",
+        "keywords": ["career", "job", "employment"],
         "response": "Career Services offers resume reviews, interview preparation, internships, and job placement assistance."
     },
     {
-        "keyword": "internship",
+        "keywords": ["internship", "internships"],
         "response": "Internship opportunities are posted through the Career Services Portal."
     },
     {
-        "keyword": "health",
+        "keywords": ["health", "medical", "clinic", "wellness"],
         "response": "Student Health Services provides medical consultations, vaccinations, and wellness programs."
     },
     {
-        "keyword": "cafeteria",
+        "keywords": ["cafeteria", "food", "meal"],
         "response": "The campus cafeteria is open daily and offers a variety of meal plans for students."
     }
 ]
