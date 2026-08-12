@@ -120,6 +120,9 @@ def test_internship():
     response = get_response("Where can I find internships?")
     assert "internship" in response.lower()
 
+def test_internship_variation():
+    response = get_response("How can I apply for student housing")
+    assert "internship" in response.lower()
 
 def test_health_services():
     response = get_response("Where can I find health services?")
@@ -175,11 +178,11 @@ def test_password_reset():
     assert "password" in response.lower()
 
 
-def test_career_help():
+def test_financial_aid():
     response = get_response(
-        "Does the university provide career services?"
+        "How can I apply for financial aid?"
     )
-    assert "career" in response.lower()
+    assert "financial" in response.lower() or "financial aid" in response.lower()
 
 
 def test_tokenization():
