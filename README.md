@@ -9,6 +9,17 @@ Nithin Reddy
 This project is a simple AI-powered chatbot developed using Python and Flask.
 The chatbot answers frequently asked questions related to university admissions, registration, tuition, financial aid, and other student services.
 
+## Requirements
+Flask
+nltk
+pytest
+
+### NLTK Data Setup
+
+The chatbot uses NLTK for text preprocessing. After installing the Python dependencies, download the required NLTK resources:
+
+python -m nltk.downloader punkt_tab stopwords
+
 ## Technologies Used
 
 - Python

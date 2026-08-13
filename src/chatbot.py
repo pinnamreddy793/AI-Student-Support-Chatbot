@@ -1,5 +1,5 @@
 #AI Student Support Chatbot
-#chatbot.py contains code to search thr keywords and show answer from faq
+#chatbot.py contains code to search keywords and show answer from faq
 
 import json
 import os
@@ -8,9 +8,17 @@ import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 
-# Comment these lines after the first time you run the application.
-nltk.download("punkt")
-nltk.download("stopwords")
+# Ensure required NLTK resources are available
+try:
+    nltk.data.find("tokenizers/punkt_tab")
+except LookupError:
+    nltk.download("punkt_tab")
+
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords")
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FAQ_FILE = os.path.join(BASE_DIR, "faq.json")
